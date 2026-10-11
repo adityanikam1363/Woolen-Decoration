@@ -55,7 +55,7 @@ export default function ProductDetails({
           <div className="min-h-[300px] bg-sand md:min-h-full" />
         )}
         <div className="flex flex-col justify-center p-8 sm:p-10">
-          <p className="eyebrow">{product.badge}</p>
+          {product.badge && <p className="eyebrow">{product.badge}</p>}
           <h2
             id="product-dialog-title"
             className="mt-5 font-display text-4xl leading-none"

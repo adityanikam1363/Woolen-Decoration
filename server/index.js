@@ -32,7 +32,9 @@ import { sampleProducts } from "./seed-products.js"
 
 const app = express()
 
-const port = Number(process.env.API_PORT || 3002)
+
+const port = Number(process.env.PORT || process.env.API_PORT || 3002)
+
 
 const isProduction = process.env.NODE_ENV === "production"
 
@@ -225,7 +227,7 @@ function serializeProduct(value) {
     ? "FEATURED"
     : value.newArrival
       ? "NEW ARRIVAL"
-      : "FEATURED"
+      : undefined
 
   return {
     id: value.id,

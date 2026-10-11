@@ -25,9 +25,11 @@ export default function ProductCard({
             className="aspect-[1.18] w-full bg-sand"
           />
         )}
-        <span className="absolute left-4 top-4 rounded bg-ivory/95 px-3 py-1.5 text-[10px] font-semibold tracking-[.15em] text-terracotta">
-          {product.badge}
-        </span>
+        {product.badge && (
+          <span className="absolute left-4 top-4 rounded bg-ivory/95 px-3 py-1.5 text-[10px] font-semibold tracking-[.15em] text-terracotta">
+            {product.badge}
+          </span>
+        )}
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between gap-4">

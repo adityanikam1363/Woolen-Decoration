@@ -52,14 +52,15 @@ function PublicCatalogue() {
   const featured = useMemo(
     () =>
       products.filter(
-        (product) => product.featured ?? product.badge === "FEATURED",
+        (product) => Boolean(product.featured || product.badge === "FEATURED"),
       ),
     [products],
   )
   const arrivals = useMemo(
     () =>
       products.filter(
-        (product) => product.newArrival ?? product.badge === "NEW ARRIVAL",
+        (product) =>
+          Boolean(product.newArrival || product.badge === "NEW ARRIVAL"),
       ),
     [products],
   )
@@ -67,8 +68,8 @@ function PublicCatalogue() {
     () =>
       products.filter(
         (product) =>
-          !(product.featured ?? product.badge === "FEATURED") &&
-          !(product.newArrival ?? product.badge === "NEW ARRIVAL"),
+          !Boolean(product.featured || product.badge === "FEATURED") &&
+          !Boolean(product.newArrival || product.badge === "NEW ARRIVAL"),
       ),
     [products],
   )

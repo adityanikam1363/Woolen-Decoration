@@ -5,7 +5,7 @@ export interface Product {
   priceAmount?: number
   image: string
   status: "Available" | "Out of Stock"
-  badge: "FEATURED" | "NEW ARRIVAL"
+  badge?: "FEATURED" | "NEW ARRIVAL"
   description: string
   shortDescription?: string
   fullDescription?: string
