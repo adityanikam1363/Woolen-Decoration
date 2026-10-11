@@ -1,0 +1,10 @@
+{
+  "description": "Showcases handcrafted woolen products with elegant design and seamless navigation, enabling customers to explore collections and inquire via WhatsApp.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
