@@ -12,17 +12,8 @@ import {
 import { useEffect, useMemo, useState } from "react"
 import type { ChangeEvent, DragEvent, FormEvent } from "react"
 import { apiRequest } from "../api"
+import { productCategories } from "../data/products"
 import type { Product } from "../types/product"
-
-const categories = [
-  "Woolen Decorations",
-  "Home Décor",
-  "Handmade Accessories",
-  "Gifts",
-  "Handmade Woolen Crafts",
-  "Knitted Products",
-  "Seasonal Collection",
-]
 
 type ProductInput = {
   name: string
@@ -39,7 +30,7 @@ type ProductInput = {
 
 const emptyProduct: ProductInput = {
   name: "",
-  category: categories[0],
+  category: productCategories[0],
   price: "",
   shortDescription: "",
   fullDescription: "",
@@ -57,7 +48,9 @@ function toProductInput(product: Product): ProductInput {
     product.priceAmount ?? (Number(product.price.replace(/[^\d.]/g, "")) || 0)
   return {
     name: product.name,
-    category: product.category || categories[0],
+    category:
+      productCategories.find((category) => category === product.category) ||
+      productCategories[0],
     price: String(amount),
     shortDescription: product.shortDescription || product.description,
     fullDescription: product.fullDescription || product.description,
@@ -373,7 +366,7 @@ export default function AdminDashboard() {
                 }
                 className="admin-input"
               >
-                {categories.map((category) => (
+                {productCategories.map((category) => (
                   <option key={category}>{category}</option>
                 ))}
               </select>
@@ -597,7 +590,7 @@ export default function AdminDashboard() {
               aria-label="Filter by category"
             >
               <option value="">All categories</option>
-              {categories.map((category) => <option key={category}>{category}</option>)}
+              {productCategories.map((category) => <option key={category}>{category}</option>)}
             </select>
             <select
               value={availabilityFilter}

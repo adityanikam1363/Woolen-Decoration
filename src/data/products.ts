@@ -1,5 +1,13 @@
 import type { Category, Product } from "../types/product"
 
+export const productCategories = [
+  "Decoration Mat",
+  "Rangoli Mat",
+  "Pooja Mat",
+  "Toran",
+  "Door Hanging",
+] as const
+
 const images = {
   knit: "https://framerusercontent.com/images/P5EMRbCJPUz1FWu8aMToBSnDjWM.jpg?width=900&height=900",
   scarf:
@@ -14,12 +22,11 @@ const images = {
 }
 
 export const categories: Category[] = [
-  { name: "Woolen Decorations", image: images.knit },
-  { name: "Handmade Woolen Crafts", image: images.scarf },
-  { name: "Knitted Products", image: images.basket },
-  { name: "Woolen Accessories", image: images.crochet },
-  { name: "Home Décor", image: images.yarn },
-  { name: "Seasonal Collection", image: images.woven },
+  { name: productCategories[0], image: images.knit },
+  { name: productCategories[1], image: images.woven },
+  { name: productCategories[2], image: images.crochet },
+  { name: productCategories[3], image: images.yarn },
+  { name: productCategories[4], image: images.scarf },
 ]
 
 export const featuredProducts: Product[] = [

@@ -1,7 +1,7 @@
 export const sampleProducts = [
   {
     name: "Cloud Knit Throw",
-    category: "Woolen Decorations",
+    category: "Decoration Mat",
     price: 2450,
     shortDescription: "A softly textured knit throw made to bring warmth and quiet character to your favorite corner.",
     fullDescription: "A softly textured knit throw made to bring warmth and quiet character to your favorite corner.",
@@ -13,7 +13,7 @@ export const sampleProducts = [
   },
   {
     name: "Terracotta Cable Scarf",
-    category: "Handmade Accessories",
+    category: "Toran",
     price: 1250,
     shortDescription: "A warm, richly textured scarf in an earthy terracotta tone, finished slowly by hand.",
     fullDescription: "A warm, richly textured scarf in an earthy terracotta tone, finished slowly by hand.",
@@ -25,7 +25,7 @@ export const sampleProducts = [
   },
   {
     name: "Nest Crochet Basket",
-    category: "Home Décor",
+    category: "Pooja Mat",
     price: 890,
     shortDescription: "A sturdy crochet basket for yarn, keepsakes, and all the small things that make a home.",
     fullDescription: "A sturdy crochet basket for yarn, keepsakes, and all the small things that make a home.",
@@ -37,7 +37,7 @@ export const sampleProducts = [
   },
   {
     name: "Ivory Crochet Table Accent",
-    category: "Home Décor",
+    category: "Rangoli Mat",
     price: 650,
     shortDescription: "A delicate ivory crochet accent that adds handmade softness to a table or shelf.",
     fullDescription: "A delicate ivory crochet accent that adds handmade softness to a table or shelf.",
@@ -49,7 +49,7 @@ export const sampleProducts = [
   },
   {
     name: "Meadow Craft Yarn Set",
-    category: "Gifts",
+    category: "Door Hanging",
     price: 480,
     shortDescription: "A tactile set of soft yarns in fresh, natural shades for unhurried creative afternoons.",
     fullDescription: "A tactile set of soft yarns in fresh, natural shades for unhurried creative afternoons.",
@@ -61,7 +61,7 @@ export const sampleProducts = [
   },
   {
     name: "Woven Winter Keepsake",
-    category: "Seasonal Collection",
+    category: "Door Hanging",
     price: 1150,
     shortDescription: "A warm woven keepsake with a natural palette and a beautifully tactile finish.",
     fullDescription: "A warm woven keepsake with a natural palette and a beautifully tactile finish.",
